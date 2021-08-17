@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="root" alignment="CENTER" hgap="5.0" vgap="7.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreditCardInputFXML.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="175.40000000000003" minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="75.0" minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="139.00001525878906" minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="91.39999999999998" minHeight="10.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="creditCardLabel" text="Credit Card Number" GridPane.columnIndex="1" GridPane.columnSpan="2">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TextField fx:id="creditCardNumber" minHeight="50.0" onKeyReleased="#handleCreditEvent" promptText="XXXX XXXX XXXX XXXX" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+      <TextField fx:id="ccvNumber" minHeight="50.0" onKeyReleased="#handleCCVEvent" promptText="XXX" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+      <TextField fx:id="expirationDate" maxWidth="-Infinity" minHeight="50.0" minWidth="-Infinity" prefHeight="50.0" prefWidth="131.0" promptText="mm/yyyy" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+      <Label fx:id="expirationDateLabel" alignment="CENTER" text="Expiration Date" textAlignment="JUSTIFY" GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="ccvLabel" text="CCV" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <ImageView fx:id="cardImgView" fitHeight="50.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+      <ImageView fx:id="cardStatusImgView" fitHeight="50.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <ImageView fx:id="ccvStatusImgView" fitHeight="50.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</GridPane>
