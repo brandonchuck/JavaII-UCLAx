@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DBClient.DBClientController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="609.5999694824219" minWidth="10.0" prefWidth="349.6" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.19999999999993" minWidth="10.0" prefWidth="347.19999999999993" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="187.4" minHeight="10.0" prefHeight="128.00000762939453" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="165.40000762939454" minHeight="10.0" prefHeight="116.79999237060548" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="137.39999999999998" minHeight="10.0" prefHeight="130.39999999999998" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextArea fx:id="sqlArea" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="128.0" prefWidth="548.0" GridPane.columnSpan="2" />
+      <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="Go" onMouseClicked="#chooseTable" translateX="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+        <columns>
+        </columns>
+      </TableView>
+   </children>
+</GridPane>
